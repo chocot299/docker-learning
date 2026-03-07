@@ -1,0 +1,28 @@
+{
+    "family": "myapp",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": ["FARGATE"],
+    "cpu": "256",
+    "memory": "512",
+    "executionRoleArn": "arn:aws:iam::453809273387:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
+      {
+        "name": "myapp",
+        "image": "453809273387.dkr.ecr.ap-northeast-1.amazonaws.com/myapp:latest",
+        "portMappings": [
+          {
+            "containerPort": 3000,
+            "protocol": "tcp"
+          }
+        ],
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "/ecs/myapp",
+            "awslogs-region": "ap-northeast-1",
+            "awslogs-stream-prefix": "ecs"
+          }
+        }
+      }
+    ]
+  }

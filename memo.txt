@@ -1,0 +1,2 @@
+# repositoryUri
+453809273387.dkr.ecr.ap-northeast-1.amazonaws.com/myapp
