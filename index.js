@@ -6,7 +6,7 @@ const app = express()
 
 // 3. GETリクエストに応答する
 app.get('/', (req, res) => {
-  res.send('Hello from Docker!')
+  res.send('Hello from Docker! v2')
 })
 
 // 4. ポート3000で起動する
